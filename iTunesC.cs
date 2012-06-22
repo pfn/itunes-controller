@@ -47,7 +47,7 @@ namespace pfn {
         static void ShowTrackInfo(IITTrack track) {
             var rating = track.Rating / 20;
             var stars = rating == 1 ? " star" : " stars";
-            var text = track.Artist + "\n" + track.Album +
+            var text = "by: " + track.Artist + "\n" + track.Album +
                     "\n\n " + (rating == 0 ? "Rating not set" :
                                     "Rated " + rating + stars);
             ShowNotification(text, track.Name);
